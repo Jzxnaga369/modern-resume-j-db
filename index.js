@@ -11,11 +11,44 @@ app.listen(PORT, () => {
 });
 
 
-app.get('/users', async (req, res) => {
+app.get('/biodata', async (req, res) => {
   try {
   //   const users = await User.findAll(); // fetch users
   //   res.json(users);
-    res.status(200).json({ user: "getting users" });
+    res.status(200).json({ user: "getting biodata" });
+  } catch (err) {
+    console.error('❌ Error fetching users:', err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+app.get('/education', async (req, res) => {
+  try {
+  //   const users = await User.findAll(); // fetch users
+  //   res.json(users);
+    res.status(200).json({ user: "getting education" });
+  } catch (err) {
+    console.error('❌ Error fetching users:', err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+app.get('/experience', async (req, res) => {
+  try {
+  //   const users = await User.findAll(); // fetch users
+  //   res.json(users);
+    res.status(200).json({ user: "getting experience" });
+  } catch (err) {
+    console.error('❌ Error fetching users:', err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+app.get('/skill', async (req, res) => {
+  try {
+  //   const users = await User.findAll(); // fetch users
+  //   res.json(users);
+    res.status(200).json({ user: "getting skill" });
   } catch (err) {
     console.error('❌ Error fetching users:', err);
     res.status(500).json({ error: 'Internal server error' });
