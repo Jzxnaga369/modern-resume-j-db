@@ -14,10 +14,16 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Skill.init({
-    year: DataTypes.INTEGER,
+    logoimg: DataTypes.STRING,
+    skillname: DataTypes.STRING,
+    monthfrom: DataTypes.INTEGER,
+    monthto: DataTypes.INTEGER,
+    yearfrom: DataTypes.INTEGER,
+    yearto: DataTypes.INTEGER,
     title: DataTypes.STRING,
-    details: DataTypes.STRING,
-    points: DataTypes.ARRAY(DataTypes.STRING)
+    detail: DataTypes.STRING,
+    points: DataTypes.ARRAY(DataTypes.STRING),
+    photoimgs: DataTypes.ARRAY(DataTypes.STRING)
   }, {
     sequelize,
     modelName: 'Skill',

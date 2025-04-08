@@ -14,11 +14,16 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Experience.init({
-    id: DataTypes.INTEGER,
-    year: DataTypes.INTEGER,
+    logoimg: DataTypes.STRING,
+    companyname: DataTypes.STRING,
+    monthfrom: DataTypes.INTEGER,
+    monthto: DataTypes.INTEGER,
+    yearfrom: DataTypes.INTEGER,
+    yearto: DataTypes.INTEGER,
     title: DataTypes.STRING,
-    details: DataTypes.STRING,
-    points: DataTypes.ARRAY(DataTypes.STRING)
+    detail: DataTypes.STRING,
+    points: DataTypes.ARRAY(DataTypes.STRING),
+    photoimgs: DataTypes.ARRAY(DataTypes.STRING)
   }, {
     sequelize,
     modelName: 'Experience',

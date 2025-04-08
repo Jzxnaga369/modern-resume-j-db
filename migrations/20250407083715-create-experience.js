@@ -9,16 +9,34 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      year: {
+      logoimg:{
+        type: Sequelize.STRING
+      },
+      companyname:{
+        type: Sequelize.STRING
+      },
+      monthfrom: {
+        type: Sequelize.INTEGER
+      },
+      yearfrom: {
+        type: Sequelize.INTEGER
+      },
+      monthto: {
+        type: Sequelize.INTEGER
+      },
+      yearto: {
         type: Sequelize.INTEGER
       },
       title: {
         type: Sequelize.STRING
       },
-      details: {
+      detail: {
         type: Sequelize.STRING
       },
       points: {
+        type: Sequelize.ARRAY(Sequelize.STRING)
+      },
+      photoimgs:{
         type: Sequelize.ARRAY(Sequelize.STRING)
       },
       createdAt: {

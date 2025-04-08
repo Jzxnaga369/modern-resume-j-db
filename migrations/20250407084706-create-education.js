@@ -2,23 +2,41 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Education', {
+    await queryInterface.createTable('Educations', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      year: {
+      logoimg:{
+        type: Sequelize.STRING
+      },
+      educationname:{
+        type: Sequelize.STRING
+      },
+      monthfrom: {
+        type: Sequelize.INTEGER
+      },
+      yearfrom: {
+        type: Sequelize.INTEGER
+      },
+      monthto: {
+        type: Sequelize.INTEGER
+      },
+      yearto: {
         type: Sequelize.INTEGER
       },
       title: {
         type: Sequelize.STRING
       },
-      details: {
+      detail: {
         type: Sequelize.STRING
       },
       points: {
+        type: Sequelize.ARRAY(Sequelize.STRING)
+      },
+      photoimgs:{
         type: Sequelize.ARRAY(Sequelize.STRING)
       },
       createdAt: {
@@ -32,6 +50,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Education');
+    await queryInterface.dropTable('Educations');
   }
 };
