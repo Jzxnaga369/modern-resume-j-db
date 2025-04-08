@@ -1,25 +1,24 @@
 'use strict';
+const accountdetails = [
+  {
+    name:"Juan",
+    lastname:"Sanjaya",
+    birthdate:'1994-11-22',
+    company:"superadminyourmakerprotocol",
+    phonenumber:"087878733288",
+    email:"andreasjuansanjaya@gmail.com",
+    createdAt: new Date(),
+    updatedAt: new Date()
+  }
+]
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+    await queryInterface.bulkInsert('Accountdetails', accountdetails, {});
   },
 
   async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+    await queryInterface.bulkDelete('Accountdetails', null, {});
   }
 };

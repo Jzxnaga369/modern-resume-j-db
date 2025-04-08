@@ -14,9 +14,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Biodata.init({
-    title: DataTypes.STRING,
-    details: DataTypes.STRING,
-    points: DataTypes.ARRAY(DataTypes.STRING)
+    name: DataTypes.STRING,
+    email: DataTypes.STRING,
+    phonenumber: DataTypes.STRING,
+    title: DataTypes.TEXT,
+    details: DataTypes.TEXT,
+    photos: DataTypes.ARRAY(DataTypes.TEXT),
+    points: DataTypes.ARRAY(DataTypes.TEXT)
   }, {
     sequelize,
     modelName: 'Biodata',

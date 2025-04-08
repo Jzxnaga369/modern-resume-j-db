@@ -1,25 +1,20 @@
 'use strict';
+const accounts = [
+  {
+    username:"juansanjaya",
+    password:"102939Ju!",
+    createdAt: new Date(),
+    updatedAt: new Date()
+  }
+]
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+    await queryInterface.bulkInsert('Accounts', accounts, {});
   },
 
   async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+    await queryInterface.bulkDelete('Accounts', null, {});
   }
 };

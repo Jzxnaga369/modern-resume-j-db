@@ -9,14 +9,26 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      title: {
+      name: {
         type: Sequelize.STRING
+      },
+      email: {
+        type: Sequelize.STRING
+      },
+      phonenumber: {
+        type: Sequelize.STRING
+      },
+      title: {
+        type: Sequelize.TEXT
       },
       details: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
+      },
+      photos: {
+        type: Sequelize.ARRAY(Sequelize.TEXT)
       },
       points: {
-        type: Sequelize.ARRAY(Sequelize.STRING)
+        type: Sequelize.ARRAY(Sequelize.TEXT)
       },
       createdAt: {
         allowNull: false,

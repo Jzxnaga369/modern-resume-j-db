@@ -18,7 +18,7 @@ module.exports = {
         allowNull: false
       },
       birthdate: {
-        type: Sequelize.STRING
+        type: Sequelize.DATEONLY
       },
       company: {
         type: Sequelize.STRING
