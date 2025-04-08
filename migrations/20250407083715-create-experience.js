@@ -31,10 +31,10 @@ module.exports = {
         type: Sequelize.STRING
       },
       detail: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT,
       },
       points: {
-        type: Sequelize.ARRAY(Sequelize.STRING)
+        type: Sequelize.ARRAY(Sequelize.TEXT)
       },
       photoimgs:{
         type: Sequelize.ARRAY(Sequelize.STRING)

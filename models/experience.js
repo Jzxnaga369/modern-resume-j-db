@@ -21,8 +21,8 @@ module.exports = (sequelize, DataTypes) => {
     yearfrom: DataTypes.INTEGER,
     yearto: DataTypes.INTEGER,
     title: DataTypes.STRING,
-    detail: DataTypes.STRING,
-    points: DataTypes.ARRAY(DataTypes.STRING),
+    detail: DataTypes.TEXT,
+    points: DataTypes.ARRAY(DataTypes.TEXT),
     photoimgs: DataTypes.ARRAY(DataTypes.STRING)
   }, {
     sequelize,
